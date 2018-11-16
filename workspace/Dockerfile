@@ -197,9 +197,9 @@ ARG INSTALL_TIDY=false
 
 RUN if [ ${INSTALL_TIDY} = true ]; then \
   # Install the PHP TIDY extension
-  #apt-get update \
-  #    && apt-get install -y libtidy-dev php${LARADOCK_PHP_VERSION}-tidy \
-  apt-get install -y libtidy-dev php${LARADOCK_PHP_VERSION}-tidy \
+  apt-get update \
+      && apt-get install -y libtidy-dev php${LARADOCK_PHP_VERSION}-tidy \
+  # apt-get install -y libtidy-dev php${LARADOCK_PHP_VERSION}-tidy \
 ;fi
 
 ###########################################################################

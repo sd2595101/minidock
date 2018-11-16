@@ -75,13 +75,13 @@ ARG INSTALL_TIDY=true
 
 RUN if [ ${INSTALL_TIDY} = true ]; then \
     # Install the tidy extension
-    #apt-get update && \
-    #    apt-get -y install libtidy-dev && \
-    #    docker-php-ext-install tidy && \
-    #    docker-php-ext-enable tidy \
-    apt-get -y install libtidy-dev && \
+    apt-get update && \
+        apt-get -y install libtidy-dev && \
         docker-php-ext-install tidy && \
         docker-php-ext-enable tidy \
+    #apt-get -y install libtidy-dev && \
+    #    docker-php-ext-install tidy && \
+    #    docker-php-ext-enable tidy \
 ;fi
 
 ###########################################################################
